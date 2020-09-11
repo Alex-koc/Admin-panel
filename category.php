@@ -18,12 +18,19 @@ if ($zapis != '') {
 <body>
 <section class="container">
     <div class="login">
-        <h1>Категории</h1>
+        <h1>Добавить категорию</h1>
         <form method="post" action="categories.php">
             <p><input type="text" name="name" value="" placeholder="Название категории"></p>
             <p class="submit"><input type="submit" name="commit" value="Добавить"></p>
         </form>
-        <p><a href="index.html">Главное меню</a></p>
+        <form action="spisok_category.php">
+            <br>
+            <button>Категории</button>
+        </form>
+        <form action="index.html">
+            <br>
+            <button>Главное меню</button>
+        </form>
     </div>
 </section>
 </body>
