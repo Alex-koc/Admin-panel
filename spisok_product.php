@@ -20,7 +20,7 @@ $result = $pdo->query($sql);
     <div class="login">
         <h1>Таблица товаров</h1>
         <?php
-        echo "<table><tr><th>№</th><th>Товары</th><th>Описание</th><th>Цена</th><th>Фото</th></tr>";
+        echo "<table><tr><th>№</th><th>Товары</th><th>Описание</th><th>Цена</th><th>Фото</th><th>Редактировать</th><th>Удалить</th></tr>";
         while ($row = $result->fetch())
         {
 
@@ -30,6 +30,8 @@ $result = $pdo->query($sql);
             echo '<td>'.$row['text'].'</td>';
             echo '<td>'.$row['price'].'</td>';
             echo '<td>'.$row['photo'].'</td>';
+            echo '<td><a href="update1.php?id='.$row['id'].'">Редактировать</a></td>';
+            echo '<td><a href="delete1.php?id='.$row['id'].'">Удалить</a></td>';
             echo "</tr>";
 
         }

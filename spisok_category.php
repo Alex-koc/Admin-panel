@@ -1,9 +1,8 @@
 <?php
 require_once 'mysql.php';
 
-$id = $_GET['id'];
 
-$sql = "SELECT * FROM `category` WHERE id=$id";
+$sql = "SELECT * FROM `category`";
 $result = $pdo->query($sql);
 
 
@@ -25,19 +24,12 @@ $result = $pdo->query($sql);
         <table class = "table table-borderless">
             <thead class="text-center">
             <tr>
-                <th></th>
+                <th>№</th>
                 <th>Название</th>
-                <th>Авторы</th>
-                <th>Жанры</th>
-                <th>Описание</th>
-                <th>Артикул</th>
+                <th>Редактировать</th>
+                <th>Удалить</th>
             </tr>
             <?php
-
-            $result = $stmt1->fetch();
-            while ($row1 = $stmt1->fetch()){
-
-            }
 
         while ($row = $result->fetch())
         {
@@ -45,7 +37,8 @@ $result = $pdo->query($sql);
             echo "<tr>";
             echo '<td>'.$row['id'].'</td>';
             echo '<td>'.$row['name'].'</td>';
-            echo '<td><a href="d.php">Удалить</a></td>';
+            echo '<td><a href="">Редактировать</a></td>';
+            echo '<td><a href="delete.php?id='.$row['id'].'">Удалить</a></td>';
             echo "</tr>";
 
         }

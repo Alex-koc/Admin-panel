@@ -25,36 +25,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `product`
+-- Структура таблицы `category`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `text` varchar(255) NOT NULL,
-  `price` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `product`
+-- Дамп данных таблицы `category`
 --
 
-INSERT INTO `product` (`id`, `name`, `text`, `price`, `photo`) VALUES
-(2, '', '', '', 'zelenoe.jpg'),
-(3, '', '', '', 'apple-clip-art-green-apple-png-clipart-picture-thumb.jpg'),
-(4, '', '', '', '6XZSr6ddCl6cxfo0UchP.jpg'),
-(5, 'Мандарин', 'Оранжевый мандарин', '15', 'mandarin-cover-3021.jpg'),
-(6, '', '', '', 'Без названия.jfif');
+INSERT INTO `category` (`id`, `name`) VALUES
+(4, 'Яблоки'),
+(5, 'Мандарины'),
+(6, 'Бананы');
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
--- Индексы таблицы `product`
+-- Индексы таблицы `category`
 --
-ALTER TABLE `product`
+ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -62,9 +57,9 @@ ALTER TABLE `product`
 --
 
 --
--- AUTO_INCREMENT для таблицы `product`
+-- AUTO_INCREMENT для таблицы `category`
 --
-ALTER TABLE `product`
+ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
